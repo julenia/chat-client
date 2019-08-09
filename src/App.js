@@ -29,7 +29,7 @@ class App extends React.Component {
   }
 
   render() {
-    const messages = this.state.messages.map((message, i) => <p key={i}>{message}</p>)
+    const messages = this.state.messages.map((message, i) => <p key={i}>{message.text}</p>)
     const form = <form onSubmit={this.onSubmit}>
       <input type="text" value={this.state.message} onChange={this.onChange}/>
       <button type="submit">Send</button>
